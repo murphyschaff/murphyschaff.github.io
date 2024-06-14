@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Grid with Spacing</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <title>Responsive Sticky Bottom Link Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .col-content {
-      border: 1px solid black;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #ccc;
       padding: 20px;
-      background-color: #f8f9fa;
+      min-height: 300px; /* Example min-height */
+    }
+
+    .bottom-link {
+      align-self: flex-end; /* Align the link to the end (bottom) */
     }
   </style>
 </head>
 <body>
-  <div class="container overflow-hidden">
-    <div class="row gy-5">
-      <div class="col-6">
-        <div class="p-3 border bg-light">Custom column padding</div>
-      </div>
-      <div class="col-6">
-        <div class="p-3 border bg-light">Custom column padding</div>
-      </div>
-      <div class="col-6">
-        <div class="p-3 border bg-light">Custom column padding</div>
-      </div>
-      <div class="col-6">
-        <div class="p-3 border bg-light">Custom column padding</div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<div class="container">
+  <p>This is some content inside the container. As the container grows or shrinks, the link will remain at the bottom.</p>
+  <div style="flex-grow: 1;"></div> <!-- This div will take up the remaining space -->
+  <p>dingus</p>
+  <a href="#" class="bottom-link">Sticky Bottom Link</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
